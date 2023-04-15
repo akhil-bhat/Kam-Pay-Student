@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_realtive_job_description_card_hori"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20sp"
+
+    >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/card_background"
+    >
+
+
+  <RelativeLayout
+      android:id="@+id/brand_logo_relative_layout"
+      android:layout_width="104dp"
+      android:layout_height="127dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:background="@drawable/brand_logo_background"
+
+      android:alpha="0.1">
+  </RelativeLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/brand_image"
+        android:layout_width="104dp"
+        android:layout_height="127dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baskin_robbins_logo"
+        app:shapeAppearanceOverlay="@style/SoftCorner"
+        />
+
+    <TextView
+        android:id="@+id/brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baskin Robins"
+        android:layout_toRightOf="@id/brand_logo_relative_layout"
+        android:layout_marginLeft="18.5sp"
+        android:textSize="10sp"
+        android:layout_marginTop="12sp"
+        android:textColor="#66000000"
+        />
+    <TextView
+        android:id="@+id/job_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dispatcher"
+        android:layout_toRightOf="@id/brand_logo_relative_layout"
+        android:layout_marginLeft="18.5sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/brand_name"
+        android:textStyle="bold"
+        android:maxLength="14"
+        />
+<LinearLayout
+    android:id="@+id/rating_linear_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/job_name"
+    android:layout_marginLeft="10.5sp"
+    android:layout_below="@id/brand_name"
+
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:id="@+id/ratings"
+        android:layout_marginTop="8sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.9"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/rating_colors"/>
+    <View
+        android:id="@+id/star_1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="11sp"
+        android:background="@drawable/baseline_star_24"
+        />
+
+
+
+
+
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/address_linear_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_toRightOf="@id/brand_logo_relative_layout"
+    android:layout_marginTop="18sp"
+    android:layout_below="@id/job_name">
+
+
+    <View
+        android:id="@+id/map_pin_icon"
+        android:layout_width="8dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="2sp"
+        android:layout_marginStart="18.5sp"
+        android:background="@drawable/baseline_pin_drop_24" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5.01sp"
+        android:textSize="10sp"
+        android:textColor="#66000000"
+        android:text="Sec 21, Vasant kunj, New Delhi ..."
+        android:maxLength="30"/>
+</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rates_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/brand_logo_relative_layout"
+        android:layout_marginStart="18.5sp"
+        android:layout_below="@id/address_linear_layout"
+        android:layout_marginTop="18sp"
+        >
+        <ImageView
+            android:id="@+id/rupee_icon"
+            android:layout_marginTop="8sp"
+            android:layout_width="10.71sp"
+            android:layout_height="15sp"
+            android:src="@drawable/baseline_currency_rupee_24"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/rates"
+            android:layout_toRightOf="@id/rupee_icon"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="2.29sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="450"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="per day"
+            android:textSize="7sp"
+            android:textStyle="normal"
+            android:layout_below="@id/rates"
+            android:layout_marginTop="-5sp"
+            android:layout_toRightOf="@id/rupee_icon"
+            android:layout_marginLeft="6.5sp"
+            android:textColor="@color/black"/>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/apply_button"
+        android:layout_marginRight="15dp"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="41sp"
+        android:layout_below="@id/address_linear_layout"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/rates_relative_layout"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:shapeAppearanceOverlay="@style/SoftCorner"
+        >
+
+        <TextView
+            android:id="@+id/apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:textSize = "10sp"
+            android:textColor="#ffffff"
+            android:textAppearance="@style/apply"
+            />
+        <View
+            android:id="@+id/vector"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="11sp"
+            android:layout_toRightOf="@id/apply"
+            android:background="@drawable/baseline_arrow_forward_24"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:layout_width="13dp"
+        android:layout_height="16dp"
+        android:background="@drawable/baseline_bookmark_border_24"
+        android:layout_toEndOf="@id/rating_linear_layout"
+        android:layout_marginStart="17.5sp"/>
+</RelativeLayout>
+</RelativeLayout>
