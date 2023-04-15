@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="Baskin Robins"
         android:layout_toRightOf="@id/brand_logo_relative_layout"
-        android:layout_marginLeft="18.5sp"
+        android:layout_marginLeft="19sp"
         android:textSize="10sp"
         android:layout_marginTop="12sp"
         android:textColor="#66000000"
@@ -213,3 +213,5 @@
         android:layout_marginStart="17.5sp"/>
 </RelativeLayout>
 </RelativeLayout>
+
+<!--changes-->
