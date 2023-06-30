@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.EarningsFragment">
+
+    <RelativeLayout
+        android:id="@+id/parent_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/balance_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="10dp"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balance"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/balance_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs. loading..."
+        android:textSize="35dp"
+        android:maxLength="16"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/balance_refresh_btn"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/refresh_icon_black"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:overScrollMode="never"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/scroll_layout_earning_today_weekly"
+    android:paddingVertical="25dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/balance_linear_layout">
+
+
+
+        <LinearLayout
+            android:paddingHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:cardCornerRadius="10dp"
+               app:cardElevation="3dp"
+               app:cardUseCompatPadding="true"
+             >
+
+               <LinearLayout
+                   android:paddingHorizontal="20dp"
+                   android:paddingVertical="15dp"
+                   android:background="#1A117C82"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Today's Earning"
+                       android:textColor="@color/teal_200"
+                       android:textSize="15dp"
+                       />
+                   <LinearLayout
+                       android:gravity="center"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+                       <TextView
+                           android:id="@+id/today_earning_text_view"
+                           android:paddingTop="10dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Rs. loading..."
+                           android:textSize="20dp"
+                           android:maxLength="16"
+                           android:textStyle="bold"
+                           android:textColor="@color/teal_200"/>
+
+                       <ImageView
+                           android:id="@+id/today_earnings_refresh_btn"
+                           android:paddingTop="15dp"
+                           android:paddingLeft="43dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/refresh_icon_black"
+                           app:tint="@color/teal_200" />
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                >
+
+                <LinearLayout
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="15dp"
+                    android:background="#1A117C82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Earnings so far"
+                        android:textColor="@color/teal_200"
+                        android:textSize="15dp"
+                        />
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/total_earnings"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs. loading..."
+                            android:textSize="20dp"
+                            android:maxLength="16"
+                            android:textStyle="bold"
+                            android:textColor="@color/teal_200"/>
+
+                        <ImageView
+                            android:id="@+id/total_earnings_refresh_btn"
+                            android:paddingTop="15dp"
+                            android:paddingLeft="43dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/refresh_icon_black"
+                            app:tint="@color/teal_200" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                >
+
+                <LinearLayout
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="15dp"
+                    android:background="#1A117C82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This Month Earnings"
+                        android:textColor="@color/teal_200"
+                        android:textSize="15dp"
+                        />
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/this_month_earning_text_view"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs. loading..."
+                            android:textSize="20dp"
+                            android:maxLength="16"
+                            android:textStyle="bold"
+                            android:textColor="@color/teal_200"/>
+
+                        <ImageView
+                            android:id="@+id/monthly_earnings_refresh_btn"
+                            android:paddingTop="15dp"
+                            android:paddingLeft="43dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/refresh_icon_black"
+                            app:tint="@color/teal_200" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+</HorizontalScrollView>
+
+        <View
+            android:id="@+id/view_division_line"
+            android:layout_width="wrap_content"
+            android:layout_height="0.2dp"
+            android:layout_below="@id/scroll_layout_earning_today_weekly"
+            android:background="#4D5965"/>
+
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="25dp"
+            android:layout_below="@id/view_division_line"
+            >
+        <LinearLayout
+            android:id="@+id/milestone_linear_layout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milestone"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="currently set for week"
+                    android:textColor="#4D5965"
+                    android:textSize="15dp"
+                    />
+
+                <Space
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/milestone_setted_for_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 9999"
+                    android:textColor="#4D5965"
+                    android:maxLength="8"
+                    android:visibility="gone"
+                    android:gravity="right"
+                    android:textSize="15dp"
+                    />
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:layout_toRightOf="@id/milestone_setted_for_week"
+                    android:id="@+id/milestone_edit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit_icon_sqaure"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:visibility="visible"
+        android:id="@+id/edit_text_milestone_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:hint="type here"
+        android:paddingVertical="7.5dp"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/searchview_background"
+        />
+
+    <ImageView
+        android:visibility="visible"
+        android:id="@+id/tick_icon_btn_milestonSET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/tick_icon_black"
+        android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:paddingVertical="20dp"
+                android:layout_below="@id/milestone_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coming_soon_flex"/>
+
+        </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:paddingHorizontal="30dp"
+            android:paddingBottom="10dp">
+
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="if you think there’s a mistake in earnings "
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/contact_suppoirt_linear_layout"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/contact_suppot_text_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:text="contact support "/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="13dp"
+            android:src="@drawable/baseline_arrow_forward_24"
+            app:tint="@color/teal_200" />
+
+    </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="7.5dp"
+/>
+    <androidx.cardview.widget.CardView
+        android:clickable="true"
+        android:id="@+id/withdraw_button_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12.5dp"
+        app:cardBackgroundColor="@color/black"
+        android:orientation="horizontal"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        app:shapeAppearanceOverlay="@style/SoftCorner"
+        >
+        <RelativeLayout
+            android:id="@+id/withdraw_button_relative_layout"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="16.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withdraw"
+                android:textSize = "18dp"
+                android:textColor="#ffffff"
+                android:textAppearance="@style/apply"
+                />
+            <View
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/vector"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/baseline_arrow_forward_24"
+                />
+        </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

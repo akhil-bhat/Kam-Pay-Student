@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".adapters.PopUpFragmernt">
+
+
+ <LinearLayout
+     android:paddingVertical="25dp"
+     android:paddingHorizontal="25dp"
+     android:orientation="vertical"
+     android:layout_width="250dp"
+     android:layout_height="wrap_content">
+
+     <LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+     <TextView
+         android:id="@+id/business_name_popUp"
+         android:layout_gravity="center_vertical"
+         android:textSize="14dp"
+         android:layout_width="150dp"
+         android:textColor="#4D5965"
+         android:layout_height="wrap_content"
+         android:text="loading..."
+         android:maxLength="25"/>
+
+         <RelativeLayout
+             android:layout_gravity="center_vertical"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+             <androidx.cardview.widget.CardView
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:cardCornerRadius="3dp"
+                 app:cardUseCompatPadding="true">
+
+
+                 <LinearLayout
+
+                     android:id="@+id/linear_layout_rating_popUp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/profile_page_rating_background"
+                     android:orientation="horizontal"
+                     android:paddingHorizontal="6dp"
+                     android:paddingVertical="3dp">
+
+
+                     <TextView
+                         android:id="@+id/user_ratings_popUp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="0.0"
+                         android:textColor="@color/white"
+                         android:textSize="10dp"
+                         android:textStyle="bold" />
+
+                     <View
+                         android:layout_width="10dp"
+                         android:layout_height="10dp"
+                         android:layout_gravity="center_vertical"
+                         android:layout_marginLeft="3dp"
+                         android:background="@drawable/baseline_star_24" />
+
+
+                 </LinearLayout>
+
+             </androidx.cardview.widget.CardView>
+
+         </RelativeLayout>
+
+
+
+     </LinearLayout>
+
+     <Space
+         android:layout_width="wrap_content"
+         android:layout_height="10dp"/>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="20dp"
+             android:id="@+id/job_title_popUp"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:text="loading.."/>
+
+
+     </LinearLayout>
+
+     <Space
+         android:layout_width="wrap_content"
+         android:layout_height="10dp"/>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:orientation="horizontal">
+
+         <ImageView
+             android:layout_gravity="center_vertical"
+             android:layout_width="14dp"
+             android:layout_height="14dp"
+             android:src="@drawable/clock_icon"
+             app:tint="@color/grey" />
+
+         <TextView
+             android:layout_marginLeft="10dp"
+             android:id="@+id/start_time_popUp"
+             android:textSize="13dp"
+             android:text="loading..."
+             android:textColor="@color/grey"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+
+         <TextView
+             android:layout_marginLeft="5dp"
+             android:textSize="13dp"
+             android:text="-"
+             android:textColor="@color/grey"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+
+         <TextView
+
+             android:layout_marginLeft="5dp"
+             android:id="@+id/end_time_popUp"
+             android:textSize="13dp"
+             android:text=""
+             android:textColor="@color/grey"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+
+         <RelativeLayout
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+             <LinearLayout
+                android:layout_alignParentRight="true"
+                 android:id="@+id/duration_linear_layout_popUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:gravity="top"
+                 android:orientation="horizontal">
+
+                 <TextView
+                     android:id="@+id/text_view_duration_popUp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="top"
+                     android:maxLength="8"
+                     android:text="-- hrs"
+                     android:textColor="#F6CE40"
+                     android:textSize="10dp"
+                     android:textStyle="bold" />
+
+
+
+             </LinearLayout>
+
+         </RelativeLayout>
+
+
+     </LinearLayout>
+
+     <Space
+         android:layout_width="wrap_content"
+         android:layout_height="10dp"/>
+
+     <LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         >
+
+         <ImageView
+             android:layout_marginTop="4dp"
+             android:layout_gravity="top"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/map_pin_icon1"/>
+
+         <TextView
+             android:id="@+id/textView_address_popUp"
+             android:layout_marginLeft="10dp"
+             android:layout_width="100dp"
+             android:layout_height="wrap_content"
+             android:textSize="10dp"
+             android:lineSpacingExtra="2dp"
+             android:text="loading..."
+             android:textColor="@color/black"
+             />
+
+         <RelativeLayout
+             android:layout_gravity="top"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+             <RelativeLayout
+             android:layout_alignParentRight="true"
+             android:id="@+id/rates_relative_layout_popUp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             >
+
+             <ImageView
+
+                 android:id="@+id/rupee_icon_popUp"
+                 android:layout_width="21dp"
+                 android:layout_height="22dp"
+                 android:layout_centerVertical="true"
+                 android:src="@drawable/baseline_currency_rupee_24" />
+             <TextView
+                 android:layout_centerVertical="true"
+                 android:id="@+id/rates_popUp"
+                 android:layout_toEndOf="@id/rupee_icon_popUp"
+                 android:layout_marginLeft="2.29dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="***"
+                 android:textStyle="bold"
+                 android:maxLength="4"
+                 android:textSize="22dp"
+                 android:textColor="#000000" />
+
+
+
+         </RelativeLayout>
+
+         </RelativeLayout>
+
+     </LinearLayout>
+
+     <Space
+         android:layout_width="wrap_content"
+         android:layout_height="10dp"/>
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <TextView
+             android:id="@+id/desctriptionTextView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Description  : "
+             android:textColor="@color/grey"
+             android:textSize="10sp"
+             />
+
+         <TextView
+             android:id="@+id/description_popUp"
+             android:lineSpacingExtra="2dp"
+             android:layout_width="135sp"
+             android:layout_height="wrap_content"
+             android:textSize="10sp"
+             android:layout_marginStart="6sp"
+             android:text="loading"
+             android:textColor="@color/grey"
+             android:maxLength="150"
+             />
+
+     </LinearLayout>
+
+     <Space
+         android:layout_width="wrap_content"
+         android:layout_height="20dp"/>
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <androidx.cardview.widget.CardView
+             android:id="@+id/close_btn_popUp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:cardCornerRadius="10dp"
+             app:cardBackgroundColor="@color/black"
+             android:orientation="horizontal"
+             android:gravity="center"
+             app:shapeAppearanceOverlay="@style/SoftCorner"
+             >
+             <LinearLayout
+                 android:paddingVertical="8dp"
+                 android:paddingHorizontal="15dp"
+                 android:layout_gravity="center"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <TextView
+                     android:gravity="center"
+                     android:layout_gravity="center_horizontal"
+                     android:id="@+id/tv_close_popUp"
+                     android:layout_width="50dp"
+                     android:layout_height="wrap_content"
+                     android:text="Not Now"
+                     android:textSize = "12dp"
+                     android:textColor="#ffffff"
+                     android:textAppearance="@style/apply"
+                     />
+                 <ImageView
+                     android:layout_gravity="center"
+                     android:layout_width="9dp"
+                     android:layout_height="9dp"
+                     android:layout_marginLeft="11dp"
+                     android:layout_toRightOf="@id/apply"
+                     android:background="@drawable/close_icon"
+                     />
+             </LinearLayout>
+
+
+         </androidx.cardview.widget.CardView>
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+         <androidx.cardview.widget.CardView
+             android:layout_alignParentRight="true"
+             android:id="@+id/apply_btn_popUp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:cardCornerRadius="10dp"
+             android:layout_marginLeft="9dp"
+             app:cardBackgroundColor="@color/teal_200"
+             android:orientation="horizontal"
+             android:gravity="center"
+             app:shapeAppearanceOverlay="@style/SoftCorner"
+             >
+
+             <LinearLayout
+                 android:paddingVertical="8dp"
+                 android:paddingHorizontal="15dp"
+                 android:layout_gravity="center"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <TextView
+                     android:id="@+id/tv_apply_popUp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Apply"
+                     android:textSize = "12dp"
+                     android:textColor="#ffffff"
+                     android:textAppearance="@style/apply"
+                     />
+                 <ImageView
+                     android:layout_gravity="center"
+                     android:layout_width="12dp"
+                     android:layout_height="12dp"
+                     android:layout_marginLeft="11dp"
+                     android:layout_toRightOf="@id/apply"
+                     android:background="@drawable/baseline_arrow_forward_24"
+                     />
+             </LinearLayout>
+
+
+         </androidx.cardview.widget.CardView>
+
+             <androidx.cardview.widget.CardView
+
+                 android:layout_alignParentRight="true"
+                 android:id="@+id/applied_btn_popUp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:cardCornerRadius="10dp"
+                 android:layout_marginLeft="9dp"
+                 app:cardBackgroundColor="@color/green"
+                 android:orientation="horizontal"
+                 android:gravity="center"
+                 android:visibility="gone"
+                 app:shapeAppearanceOverlay="@style/SoftCorner"
+                 >
+
+                 <LinearLayout
+                     android:paddingVertical="8dp"
+                     android:paddingHorizontal="15dp"
+                     android:layout_gravity="center"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+
+                     <TextView
+                         android:id="@+id/tv_applied_popUp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="applied"
+                         android:textSize = "12dp"
+                         android:textColor="#ffffff"
+                         android:textAppearance="@style/apply"
+                         />
+                     <ImageView
+                         android:layout_gravity="center"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="11dp"
+                         android:layout_toRightOf="@id/apply"
+                         android:background="@drawable/tick_icon_white" />
+
+                 </LinearLayout>
+
+
+             </androidx.cardview.widget.CardView>
+
+         </RelativeLayout>
+
+     </LinearLayout>
+
+     <Space
+         android:layout_width="wrap_content"
+         android:layout_height="10dp"/>
+
+     <LinearLayout
+         android:layout_gravity="center_horizontal"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="8dp"
+         android:textStyle="bold"
+         android:text="Note: "/>
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="8dp"
+         android:text=" After apply, you can't withdraw your application"/>
+
+     </LinearLayout>
+
+
+ </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerHorizontal="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="17.5dp"
+        android:paddingRight="17.5dp"
+        android:paddingBottom="10dp">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/filter_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_toRightOf="@id/searchView"
+            android:outlineSpotShadowColor="@color/grey_10T"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:drawablePadding="15dp"
+            android:layout_marginLeft="-20dp"
+            android:background="@drawable/searchview_background"
+            android:drawableRight="@drawable/filter_icon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:hint="Search for Job Type, Businesss name or more..."
+            app:defaultQueryHint="search"
+            android:outlineSpotShadowColor="@color/grey_10T"
+            android:textSize="12dp"
+            app:iconifiedByDefault="true"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:background="@drawable/searchview_background"
+            android:drawableRight="@drawable/search_icon_for_bar"
+            android:drawablePadding="17dp"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="35dp"
+            android:id="@+id/recyclerViewFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:listitem="@layout/filter_items_list"
+        android:paddingTop="7.5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:paddingTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerViewFilter"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_top_searches"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top Searches for you"
+            android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recylerViewHorizontalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:listitem="@layout/job_description_card_horizontal_scroll"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/text_view_jobs_explore"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jobs to explore"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/recyclerView_Vertical_Scrolls"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recylerViewHorizontalScroll"
+        tools:listitem="@layout/job_description_card_vertical_scrolls"
+       />
+
+        <ProgressBar
+            android:layout_marginTop="258dp"
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/nothig_to_show_tv"
+            android:layout_marginTop="258dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NothiNg to show :)"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</RelativeLayout>
+
+</FrameLayout>

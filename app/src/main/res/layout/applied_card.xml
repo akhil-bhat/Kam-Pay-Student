@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/brand_logo_relative_layout_a"
+                android:layout_width="104dp"
+                android:layout_height="127dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/brand_logo_background"
+                >
+            </RelativeLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/brand_image_a"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baskin_robbins_logo"
+                app:shapeAppearanceOverlay="@style/SoftCorner"
+                />
+
+            <TextView
+                android:id="@+id/brand_name_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- - - - - - -"
+                android:layout_toRightOf="@id/brand_logo_relative_layout_a"
+                android:layout_marginLeft="19dp"
+                android:textSize="10dp"
+                android:layout_marginTop="12dp"
+                android:textColor="#66000000"
+                />
+            <TextView
+                android:id="@+id/job_name_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/ / / / / / /"
+                android:layout_toRightOf="@id/brand_logo_relative_layout_a"
+                android:layout_marginLeft="18.5dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/brand_name_a"
+                android:textStyle="bold"
+                android:maxLength="12"
+                />
+
+            <LinearLayout
+                android:id="@+id/rating_linear_layout_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/job_name_a"
+                android:layout_marginLeft="10.5dp"
+                android:layout_below="@id/brand_name_a"
+
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/ratings_a"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-.-"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_red"/>
+                <ImageView
+                    android:id="@+id/star_image_view_ratings_a"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/baseline_star_24"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/address_linear_layout_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@id/brand_logo_relative_layout_a"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/job_name_a">
+
+
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/map_pin_icon_a"
+                    android:layout_width="8dp"
+                    android:layout_height="9dp"
+                    android:layout_marginStart="18.5dp"
+                    android:background="@drawable/map_pin_icon" />
+
+                <TextView
+                    android:id="@+id/address_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5.01dp"
+                    android:textSize="10dp"
+                    android:textColor="#66000000"
+                    android:text="Not available"
+                    android:maxLength="30"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rates_relative_layout_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/brand_logo_relative_layout_a"
+                android:layout_marginStart="18.5dp"
+                android:layout_below="@id/address_linear_layout_a"
+                android:layout_marginTop="8dp"
+                >
+
+                <View
+                    android:id="@+id/rupee_icon_a"
+                    android:layout_width="21dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/baseline_currency_rupee_24" />
+                <TextView
+                    android:id="@+id/rates_a"
+                    android:layout_toEndOf="@id/rupee_icon_a"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="2.29dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:textStyle="bold"
+                    android:maxLength="4"
+                    android:textSize="22dp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="per day"
+                    android:textSize="7dp"
+                    android:textStyle="normal"
+                    android:layout_below="@id/rates_a"
+                    android:layout_marginTop="-5dp"
+                    android:layout_toRightOf="@id/rupee_icon_a"
+                    android:layout_marginLeft="6.5dp"
+                    android:textColor="@color/black"/>
+
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/apply_button_a"
+                android:layout_marginEnd="15dp"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="41dp"
+                android:layout_below="@id/address_linear_layout_a"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@id/rates_relative_layout_a"
+                app:cardBackgroundColor="@color/green"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:shapeAppearanceOverlay="@style/SoftCorner"
+                >
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/apply_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="applied"
+                        android:textSize = "10dp"
+                        android:textColor="#ffffff"
+                        android:textAppearance="@style/apply"
+                        />
+                    <View
+                        android:layout_gravity="center"
+                        android:id="@+id/vector_a"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_toRightOf="@id/apply"
+                        android:background="@drawable/tick_icon_white"
+                        />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/bookMarkIcon_a"
+                android:layout_width="13dp"
+                android:layout_alignParentTop="true"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:background="@drawable/bookmark_icon"
+                android:layout_toEndOf="@id/apply_button_a"
+                android:layout_marginLeft="-40dp"/>
+
+
+            <ImageView
+                android:id="@+id/bookMarkIcon_filled_a"
+                android:layout_width="13dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_height="20dp"
+                android:background="@drawable/bookmark_icon_filled"
+                android:layout_toEndOf="@id/apply_button_a"
+                android:layout_marginLeft="-40dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

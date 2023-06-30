@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:paddingVertical="15dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical">
+
+<LinearLayout
+    android:id="@+id/linear_layout_side_menu_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/profile_pic_user_sidemenu"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/profile_default_photo"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/white"
+        app:civ_border_overlay="true"/>
+
+<LinearLayout
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp">
+
+
+    <TextView
+        android:id="@+id/user_name_side_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="user_name_loading"
+        android:maxLength="17"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/user_sheer_id_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loading... "
+        android:layout_gravity="center_vertical"
+        android:textColor="@android:color/white"
+        android:textSize="14dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        android:layout_marginStart="15dp"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+
+            android:id="@+id/linear_layout_rating_side_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_page_rating_background"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="3dp">
+
+
+            <TextView
+                android:id="@+id/user_ratings_side_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="loading..."
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/baseline_star_24" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:paddingHorizontal="20dp"
+        android:layout_below="@id/linear_layout_side_menu_header"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/baseline_email_24"/>
+
+            <TextView
+                android:id="@+id/user_email_side_menu"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="loading..."
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/baseline_phone_24"/>
+
+            <TextView
+                android:id="@+id/user_mobile_no"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="loading..."
+                android:textSize="12dp"
+                android:maxLength="11"
+                android:textColor="@color/white"
+                android:layout_marginStart="15dp"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

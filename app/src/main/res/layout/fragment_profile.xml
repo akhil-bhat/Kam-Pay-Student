@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SupportFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:padding="25dp"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout_profile_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--                   <ImageView-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="200dp"-->
+<!--                       android:background="@drawable/profile_page_header_background" />-->
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="10dp"
+    android:background="@drawable/searchview_background">
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_page_image"
+                android:layout_width="110dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wizard"
+                app:shapeAppearanceOverlay="@style/SoftCorner">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+</androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text= "user _ name"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/sheerdIdStatusIcon"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="3dp"
+                        android:src="@drawable/pending_icon_yellow"
+                    />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxLength="36"
+                    android:text="useremail@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/user_mobile_no_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxLength="28"
+                    android:text="mobileNo"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginLeft="-4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <LinearLayout
+
+                        android:id="@+id/linear_layout_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_page_rating_background"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="3dp">
+
+
+                        <TextView
+                            android:id="@+id/user_ratings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="loading..."
+                            android:textColor="@color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:background="@drawable/baseline_star_24" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.001dp"
+            android:layout_below="@id/linear_layout_profile_info"
+            android:background="@color/grey" />
+
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout_profile_info"
+          >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="20dp">
+        <LinearLayout
+
+            android:id="@+id/realtive_layout_card_views"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+           >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                >
+
+                    <LinearLayout
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="24dp"
+                        android:background="#1A117C82"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SheerID Verification"
+                            android:textSize="12dp"
+                            android:layout_weight="0.8"
+                            android:textStyle="bold"
+                            android:textColor="@color/teal_200"/>
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/forward_arrow_without_tail"
+                            app:tint="@color/teal_200" />
+
+                    </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                >
+
+                <LinearLayout
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="24dp"
+                    android:background="#1A117C82"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Profile"
+                        android:textSize="12dp"
+                        android:layout_weight="0.8"
+                        android:textStyle="bold"
+                        android:textColor="@color/teal_200"/>
+
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/edit_icon_sqaure"
+                        app:tint="@color/teal_200" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="22dp"
+    android:layout_below="@id/realtive_layout_card_views">
+
+    <TextView
+        android:id="@+id/milestone_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Milestone Progress"
+        android:textColor="#4D5965"
+        android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/percentageMilestoneProgress"
+                android:textStyle="bold"
+                android:text="0%"
+                android:textSize="12dp"
+                android:layout_marginTop="22dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/dark_red"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/milestone_text_view"/>
+
+            <SeekBar
+                android:thumbOffset="2dp"
+                android:layout_marginTop="21dp"
+                android:layout_below="@id/milestone_text_view"
+                android:id="@+id/custom_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:progressDrawable="@drawable/my_seekbar"
+                android:thumb="@drawable/seekbar_thumb" />
+            <TextView
+                android:id="@+id/completed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed Rs. "
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/custom_seekbar"
+                android:textSize="12dp"
+                android:layout_marginTop="13dp"
+                />
+
+    <TextView
+        android:id="@+id/start_from_0"
+        android:layout_toRightOf="@id/completed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_below="@id/custom_seekbar"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_marginTop="13dp"
+        />
+    <TextView
+        android:id="@+id/milestone_setted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs. 100"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/custom_seekbar"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_marginTop="13dp"
+        />
+
+            <LinearLayout
+                android:clickable="true"
+                android:id="@+id/linear_layout_go_to_earnings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/milestone_setted"
+                android:layout_marginTop="19dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+
+
+            <TextView
+                android:id="@+id/go_to_earnings_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to Earnings "
+                android:textSize="12dp"
+                android:textColor="#804D5965"
+                android:textStyle="bold"
+                />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    app:tint="#804D5965" />
+            </LinearLayout>
+
+
+</RelativeLayout>
+        </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

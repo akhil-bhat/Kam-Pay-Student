@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/search_icon_bottom_nav"
+        android:title="Explore" />
+
+    <item
+        android:id="@+id/nav_applied"
+        android:icon="@drawable/applied_icon_bottom_nav"
+        android:title="Applied" />
+
+    <item
+        android:id="@+id/nav_earnings"
+        android:icon="@drawable/earning_icon_bootom_nav"
+        android:title="Earnings" />
+
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/support_icon_bottom_nav"
+        android:title="Support" />
+
+</menu>
